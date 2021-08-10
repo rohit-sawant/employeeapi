@@ -1,8 +1,8 @@
 # REST API 
 
 This is an Employee API which fetches data according to the respective attributes:
-1.First name
-2.Last name
+*First name
+* Last name
 3.Email
 4.Age
 5.Date Of Birth
