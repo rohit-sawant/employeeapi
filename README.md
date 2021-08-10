@@ -1,23 +1,29 @@
-##REST API
-This is a simple API that fetch employee data. 
-The API is built using FLASK AND PYTHON 
-Employee table has 6 attributes namely
-1.First name
-2.Last name
-3.Email
-4.Age
-5.Date Of Birth
-6.Mobile No
+# REST API example application
 
+This is a bare-bones example of a Sinatra application providing a REST
+API to a DataMapper-backed model.
+
+The entire application is contained within the `app.rb` file.
+
+`config.ru` is a minimal Rack configuration for unicorn.
+
+`run-tests.sh` runs a simplistic test and generates the API
+documentation below.
+
+It uses `run-curl-tests.rb` which runs each command defined in
+`commands.yml`.
 
 ## Install
 
-    pip install -r requirements.txt
-    
+    bundle install
 
 ## Run the app
 
-    python app.py
+    unicorn -p 7000
+
+## Run the tests
+
+    ./run-tests.sh
 
 # REST API
 
