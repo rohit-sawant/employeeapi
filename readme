@@ -1,0 +1,41 @@
+This is an Api created using Flask and Python which has data on Employee
+
+Employee table has 6 attributes namely
+1.First name
+2.Last name
+3.Email
+4.Age
+5.Date Of Birth
+6.Mobile No
+
+
+
+Direction to use the api:
+1. Fetching all values
+    The index page will initially display all the employee information
+
+2. Fetching values according to single attribute
+    Attribute in the request has to match the attributes from below list 
+    ["firstname","lastname","email","age","dob","mobile"] 
+    To get the output properly should use attribute as it is, otherwise incorrect attribute would lead to inappropriate data!
+    syntax: /employee?attribute_name=value
+    Eg: /employee?firstname=Rohit
+
+    Exception: Two same attribute_name cannot be used to filter string.
+    eg /employee?firstname=Rohit&firstname=Ojas
+
+3. Fetching values according to multiple attribute
+    syntax : /employee?attribute_name=value&attribute_name=value
+    Eg: /employee?firstname=Rohit&lastname=Sawant
+    this would result all the employee having name firstname as "Rohit" and lastname as "Sawant"
+
+4. Fetching age between two numbers
+    syntax : /employee?attribute_name=lower_bound&attribute_name=upperbound
+    Eg:/employee?age=10&age=40
+    -> this would result all the employee having age between 10 and 40
+    You can club age with other attribute
+    Exception:
+    - Age should be followed by min first and max later
+    - only two age attribute_name should be used, greater than 2 would throw an error
+        eg: /employee?age=10&age=40&age=60 would cause an error
+    -
