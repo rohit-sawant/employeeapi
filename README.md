@@ -32,13 +32,13 @@ The REST API to the example app is described below.
 
 `https://employeeapigetgologistics.herokuapp.com/`
 
-this will get you all the values present in the employee array.
 
 ### Response
 
-    {"videos":[["Rohit","Sawant","sawant.rohit510@gmai.com","19","Sun, 17 May 2020 00:00:00 GMT","8291520420"],["Swati","Sawant","sawant.swati510@gmai.com","20","Thu, 05 Oct 2000 00:00:00 GMT","8976938972"],["Sandeep","Sawant","sawant.sandeep@gmai.com","23","Wed, 17 May 2000 00:00:00 GMT","9699517660"]]}
-
-    []
+    {"employee":[
+    ["Rohit","Sawant","sawant.rohit510@gmai.com","19","Sun, 17 May 2020 00:00:00 GMT","8291520420"],
+    ["Swati","Sawant","sawant.swati510@gmai.com","20","Thu, 05 Oct 2000 00:00:00 GMT","8976938972"],
+    ["Sandeep","Sawant","sawant.sandeep@gmai.com","23","Wed, 17 May 2000 00:00:00 GMT","9699517660"]]}
 
 ## Create a new Thing
 
