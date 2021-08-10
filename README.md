@@ -1,41 +1,38 @@
-# REST API example application
+# REST API 
 
-This is a bare-bones example of a Sinatra application providing a REST
-API to a DataMapper-backed model.
+This is an Employee API which fetches data according to the respective attributes:
+1.First name
+2.Last name
+3.Email
+4.Age
+5.Date Of Birth
+6.Mobile No
 
-The entire application is contained within the `app.rb` file.
+The entire application is contained within the `app.py` file.
 
-`config.ru` is a minimal Rack configuration for unicorn.
+`Procfile` is a minimal Rack configuration for heroku.
 
-`run-tests.sh` runs a simplistic test and generates the API
-documentation below.
-
-It uses `run-curl-tests.rb` which runs each command defined in
-`commands.yml`.
 
 ## Install
 
-    bundle install
+    pip install -r requirements.txt
 
 ## Run the app
 
-    unicorn -p 7000
+    python app.py
 
-## Run the tests
-
-    ./run-tests.sh
 
 # REST API
 
 The REST API to the example app is described below.
 
-## Get list of Things
+## Get all the values
 
 ### Request
 
-`GET /thing/`
+`https://employeeapigetgologistics.herokuapp.com/`
 
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/
+this will get you all the values present in the employee array.
 
 ### Response
 
