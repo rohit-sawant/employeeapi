@@ -1,8 +1,9 @@
-from flask import Flask,jsonify,request,abort
+from flask import Flask,jsonify,request,abort,render_template
 import json
 from flask_restful import Api, Resource, reqparse
 import numpy as np
 import datetime
+
 
 app = Flask(__name__)
 api = Api(app)
@@ -34,6 +35,11 @@ def normalize_query(params):
         ans[k] = normalize_query_param(k,v)
     return ans
 
+# @app.errorhandler(500)
+# def page_not_found(e):
+#     # note that we set the 404 status explicitly
+#     return render_template('500.html'), 404
+
 @app.route('/employee',methods=['POST'])
 def findByKeywords():
     val = normalize_query(request.args)
@@ -55,10 +61,13 @@ def findByKeywords():
                     temp = [name for name in ans if name[argsindex[key]]==val[key]]
                 ans =  temp
             index = index+1
-    if ans:
-        abort('404','No such values found!')
+        else:
+            abort(404,'wrong attributes')
+    print(len(ans))
+    if len(ans)==0:
+        abort(404,'values not found')
     return jsonify({'videos':ans})
 
    
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
