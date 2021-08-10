@@ -1,12 +1,12 @@
 # REST API 
 
 This is an Employee API which fetches data according to the respective attributes:
-*First name
+* First name
 * Last name
-3.Email
-4.Age
-5.Date Of Birth
-6.Mobile No
+* Email
+* Age
+* Date Of Birth
+* Mobile No
 
 The entire application is contained within the `app.py` file.
 
