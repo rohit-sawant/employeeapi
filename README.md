@@ -10,7 +10,7 @@ This is an Employee API which fetches data according to the respective attribute
 
 The entire application is contained within the `app.py` file.
 
-`Procfile` is a minimal Rack configuration for heroku.
+`Procfile` is a minimal configuration for heroku.
 
 
 ## Install
@@ -36,12 +36,7 @@ this will get you all the values present in the employee array.
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 2
+    {"videos":[["Rohit","Sawant","sawant.rohit510@gmai.com","19","Sun, 17 May 2020 00:00:00 GMT","8291520420"],["Swati","Sawant","sawant.swati510@gmai.com","20","Thu, 05 Oct 2000 00:00:00 GMT","8976938972"],["Sandeep","Sawant","sawant.sandeep@gmai.com","23","Wed, 17 May 2000 00:00:00 GMT","9699517660"]]}
 
     []
 
