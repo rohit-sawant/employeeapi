@@ -55,7 +55,8 @@ def findByKeywords():
                     temp = [name for name in ans if name[argsindex[key]]==val[key]]
                 ans =  temp
             index = index+1
-
+    if ans:
+        abort('404','No such values found!')
     return jsonify({'videos':ans})
 
    

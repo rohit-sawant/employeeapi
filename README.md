@@ -1,85 +1,68 @@
-# REST API
-This is a simple API that fetch employee data. 
-The API is built using FLASK AND PYTHON 
-Employee table has 6 attributes namely
-1.First name
-2.Last name
-3.Email
-4.Age
-5.Date Of Birth
-6.Mobile No
+# REST API 
+
+This is an Employee API which fetches data according to the respective attributes:
+* First name
+* Last name
+* Email
+* Age
+* Date Of Birth
+* Mobile No
+
+The entire application is contained within the `app.py` file.
+
+`Procfile` is a minimal configuration for heroku.
 
 
 ## Install
 
     pip install -r requirements.txt
-    
 
 ## Run the app
 
     python app.py
 
+
 # REST API
 
 The REST API to the example app is described below.
 
-## Get list of Things
+## Get all the values
 
 ### Request
 
-`GET /thing/`
+`https://employeeapigetgologistics.herokuapp.com/`
 
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 2
-
-    []
-
-## Create a new Thing
-
-### Request
-
-`POST /thing/`
-
-    curl -i -H 'Accept: application/json' -d 'name=Foo&status=new' http://localhost:7000/thing
 
 ### Response
 
-    HTTP/1.1 201 Created
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 201 Created
-    Connection: close
-    Content-Type: application/json
-    Location: /thing/1
-    Content-Length: 36
+    {"employee":[
+    ["Rohit","Sawant","sawant.rohit510@gmai.com","19","Sun, 17 May 2020 00:00:00 GMT","8291520420"],
+    ["Swati","Sawant","sawant.swati510@gmai.com","20","Thu, 05 Oct 2000 00:00:00 GMT","8976938972"],
+    ["Sandeep","Sawant","sawant.sandeep@gmai.com","23","Wed, 17 May 2000 00:00:00 GMT","9699517660"]]}
 
-    {"id":1,"name":"Foo","status":"new"}
 
 ## Get a specific Thing
+While sending the request you have to make use of the attribute in the following list, any other attribute or spelling error would lead to inappropriate data.
+`["firstname","lastname","email","age","dob","mobile"]`
 
 ### Request
 
-`GET /thing/id`
-
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/1
+`https://employeeapigetgologistics.herokuapp.com/employee?firstname=Rohit`
 
 ### Response
+    {
+        "videos": [
+            [
+                "Rohit",
+                "Sawant",
+                "sawant.rohit510@gmai.com",
+                "19",
+                "Sun, 17 May 2020 00:00:00 GMT",
+                "8291520420"
+            ]
+        ]
+    }
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 36
-
-    {"id":1,"name":"Foo","status":"new"}
 
 ## Get a non-existent Thing
 
