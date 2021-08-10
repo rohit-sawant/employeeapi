@@ -44,10 +44,12 @@ The REST API to the example app is described below.
 ## Get a specific Thing
 While sending the request you have to make use of the attribute in the following list, any other attribute or spelling error would lead to inappropriate data.
 `["firstname","lastname","email","age","dob","mobile"]`
+
 ### Request
 
 `https://employeeapigetgologistics.herokuapp.com/employee?firstname=Rohit`
 
+### Response
     {
         "videos": [
             [
@@ -61,16 +63,6 @@ While sending the request you have to make use of the attribute in the following
         ]
     }
 
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 36
-
-    {"id":1,"name":"Foo","status":"new"}
 
 ## Get a non-existent Thing
 
