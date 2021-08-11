@@ -66,7 +66,7 @@ def normalize_query(params):
 #     # note that we set the 404 status explicitly
 #     return render_template('500.html'), 404
 
-@app.route('/employee',methods=['POST'])
+@app.route('/employee')
 def findByKeywords():
     val = normalize_query(request.args)
     
