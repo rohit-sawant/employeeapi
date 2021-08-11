@@ -51,7 +51,7 @@ def normalize_query_param(key,value):
     elif len(value)==2 and key=="age":
         return value
     elif len(value)==2 and key!="age":
-        abort(400,'Cannot filter values by two string!!!............only single value allowed')
+        abort(400,'Cannot filter values by two same Attribue (Exception Attribute : age)!!!')
     return value[0]
 
 def normalize_query(params):
