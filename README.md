@@ -40,7 +40,7 @@ The REST API to the example app is described below.
     ["Swati","Sawant","sawant.swati510@gmai.com","20","Thu, 05 Oct 2000 00:00:00 GMT","8976938972"],
     ["Sandeep","Sawant","sawant.sandeep@gmai.com","23","Wed, 17 May 2000 00:00:00 GMT","9699517660"]]}
 
-####While sending the request you have to make use of the attribute in the following list, any other attribute or spelling error would lead to inappropriate data.####
+####While sending the request you have to make use of the attribute in the following list, any other attribute or spelling error would lead to inappropriate data. 
 `["firstname","lastname","email","age","dob","mobile"]`
 
 ## Get a specific Thing
