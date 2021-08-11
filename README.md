@@ -93,27 +93,14 @@ While sending the request you have to make use of the attribute in the following
             ]
         ]
     }
-
-
-## Get a non-existent Thing or attribute
-
-### Request
-
-`https://employeeapigetgologistics.herokuapp.com/employee?firstname=Manav`
-                            or
-`https://employeeapigetgologistics.herokuapp.com/employee?firstName=Manav`
-
-
-### Response
-
-    Not Found
-    values not found
-
 ## Getting all people between two ages
 
 ### Request
-
+The minimum value should be entered first and maximum value entered later.
+no more than two attribute should be added
 `https://employeeapigetgologistics.herokuapp.com/employee?lastname=Sawant&age=10&age=20`
+this code will generate all the record having age=>10 and age<=20
+
 
 ### Response
 
@@ -137,4 +124,34 @@ While sending the request you have to make use of the attribute in the following
             ]
         ]
     }
+
+## Clubbing two same attribute except for age
+
+### Request
+Two same attribute cannot be merged in the request (Exception here is age - attribute)
+
+`https://employeeapigetgologistics.herokuapp.com/employee?lastname=Sawant&lastname=Chavan`
+
+
+
+### Response
+
+    Not Found
+    values not found
+
+## Get a non-existent Thing or attribute
+
+### Request
+Searching for data which is not present.
+`https://employeeapigetgologistics.herokuapp.com/employee?firstname=Manav`
+                            or
+
+Wrong attribute name:
+`https://employeeapigetgologistics.herokuapp.com/employee?firstame=Manav`
+
+
+### Response
+
+    Not Found
+    values not found
 
