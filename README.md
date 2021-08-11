@@ -40,10 +40,10 @@ The REST API to the example app is described below.
     ["Swati","Sawant","sawant.swati510@gmai.com","20","Thu, 05 Oct 2000 00:00:00 GMT","8976938972"],
     ["Sandeep","Sawant","sawant.sandeep@gmai.com","23","Wed, 17 May 2000 00:00:00 GMT","9699517660"]]}
 
+####While sending the request you have to make use of the attribute in the following list, any other attribute or spelling error would lead to inappropriate data.####
+`["firstname","lastname","email","age","dob","mobile"]`
 
 ## Get a specific Thing
-While sending the request you have to make use of the attribute in the following list, any other attribute or spelling error would lead to inappropriate data.
-`["firstname","lastname","email","age","dob","mobile"]`
 
 ### Request
 
@@ -64,6 +64,37 @@ While sending the request you have to make use of the attribute in the following
     }
 
 
+## Get a specific Thing using multi valued attribute
+While sending the request you have to make use of the attribute in the following list, any other attribute or spelling error would lead to inappropriate data.
+`["firstname","lastname","email","age","dob","mobile"]`
+
+### Request
+
+`https://employeeapigetgologistics.herokuapp.com/employee?firstname=Rohit&age=23`
+
+### Response
+    {
+        "videos": [
+            [
+                "Rohit",
+                "Sawant",
+                "sawant.rohit510@gmai.com",
+                "23",
+                "Sun, 17 May 2020 00:00:00 GMT",
+                "8291520420"
+            ],
+            [
+                "Rohit",
+                "Bhalu",
+                "Bhalu.rohit123@gmai.com",
+                "23",
+                "Mon, 19 Jan 2020 00:00:00 GMT",
+                "7894561230"
+            ]
+        ]
+    }
+
+
 ## Get a non-existent Thing or attribute
 
 ### Request
@@ -78,7 +109,7 @@ While sending the request you have to make use of the attribute in the following
     Not Found
     values not found
 
-## Merging two or more attributes
+## Getting all people between two ages
 
 ### Request
 
