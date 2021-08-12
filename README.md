@@ -64,7 +64,7 @@ The REST API to the example app is described below.
     }
 
 
-## Get a specific Thing using multi valued attribute
+## Get a specific Thing using two or more attribute
 While sending the request you have to make use of the attribute in the following list, any other attribute or spelling error would lead to inappropriate data.
 `["firstname","lastname","email","age","dob","mobile"]`
 
